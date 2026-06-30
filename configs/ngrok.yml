@@ -1,0 +1,9 @@
+version: "3"
+
+agent:
+  authtoken: "<Ngrok token>"
+
+tunnels:
+  llama:
+    proto: http
+    addr: 8081

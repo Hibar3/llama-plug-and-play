@@ -1,0 +1,19 @@
+{
+    auto_https off
+}
+
+:8081 {
+
+    log {
+        output file logs/access.log
+        format console
+    }
+
+    @unauthorized {
+        not header Authorization "Bearer MY_SUPER_SECRET_KEY"
+    }
+
+    respond @unauthorized "Unauthorized" 401
+
+    reverse_proxy 127.0.0.1:8080
+}

@@ -1,0 +1,8 @@
+1. how do i store the chat history?
+2.  I am going for `llama.cpp`. how do i setup?
+3. How do i expose the endpoint?
+4. I am not upgrading my RAM
+5. how do i create a simple one click solution as an single executable(.bash or exe file) solution so that i don't have to run so many things every time?
+
+
+llama-server -m models/Qwen2.5-Coder-7B-Instruct-GGUF --host 127.0.0.1 --port 8080 -c 4096 -t 8
